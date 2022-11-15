@@ -119,6 +119,18 @@ function Join() {
     return (
         <Layout name={'Join'}>
             {/* 순서 5 전송버튼 클릭시 핸들서브밋함수를 호출 */}
+            
+         <div className='btn'>
+            <button>JOIN US</button>
+            <button>LOGIN NOW</button>
+
+            <p>grace3029@gmail.com</p>
+            <p>166, Jungdong-ro, Bucheon-si, Gyeonggi-do, Republic of Korea</p>
+            <p>+82 10 3413 3029</p>
+            
+         </div>
+
+
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <legend className='h'>회원가입 폼 양식</legend>
@@ -128,7 +140,7 @@ function Join() {
                             {/* userid */}
                             <tr>
                                 <th scope='row'>
-                                    <label htmlFor="userid">ID</label>
+                                    <label htmlFor="userid">NAME</label>
                                 </th>
                                 <td>
                                     <input type="text"
@@ -179,14 +191,14 @@ function Join() {
                                     <span className='err'>{Err.email}</span>
                                 </td>
                             </tr>
-                            {/* edu */}
+                            {/* birth */}
                             <tr>
                                 <th scope='row'>
-                                    <label htmlFor="edu">BIRTHDAY</label>
+                                    <label htmlFor="birth">BIRTHDAY</label>
                                 </th>
                                 
                                 <td>
-                                    <select name="edu" id="edu" onChange={handleSelect}>
+                                    <select name="birth" id="birth" onChange={handleSelect}>
                                         <option value="MONTH">MONTH</option>
                                         <option value="1">January</option>
                                         <option value="2"> February</option>
@@ -206,7 +218,7 @@ function Join() {
                                 </td>
                             </tr>
                             {/* gender */}
-                            {/* <tr>
+                            <tr>
                                 <th scope='row'>GENDER</th>
                                 <td>
                                     <label htmlFor="male">MALE</label>
@@ -224,7 +236,7 @@ function Join() {
                                         onChange={handleRadio} />
                                     <span className='err'>{Err.gender}</span>
                                 </td>
-                            </tr> */}
+                            </tr>
                             {/* check box */}
                             {/* <tr>
                                 <th scope='row'>INTERESTS</th>
@@ -254,7 +266,7 @@ function Join() {
                                     <textarea
                                         name="comments"
                                         id="comments"
-                                        cols="30"
+                                        cols="100"
                                         rows="5"
                                         value={Val.comments}
                                         onChange={handleChange}
